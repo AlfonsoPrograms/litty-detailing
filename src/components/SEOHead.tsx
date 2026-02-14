@@ -1,6 +1,4 @@
 
-import { Helmet } from 'react-helmet-async';
-
 interface SEOHeadProps {
   title?: string;
   description?: string;
@@ -54,7 +52,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
   };
 
   return (
-    <Helmet>
+    <>
       <title>{title}</title>
       <meta name="description" content={description} />
       <link rel="canonical" href={canonicalUrl} />
@@ -66,7 +64,7 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       <script type="application/ld+json">
         {JSON.stringify(schemaData)}
       </script>
-    </Helmet>
+    </>
   );
 };
 
